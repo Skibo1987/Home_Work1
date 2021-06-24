@@ -10,7 +10,8 @@ public class Main {
         massivtri();
         massivfour();
         massivfive(5, 21);
-        //massiv_max_min();
+        massiv_max();
+        massiv_min();
     }
 
     public static void Zamena() {
@@ -73,22 +74,39 @@ public class Main {
         return arr;
     }
 
-//    public static void massiv_max_min() {
-//        int[] arr = new int[10];
-//        Random rand = new Random();
-//        for (int i = 0; i < arr.length; i++) {
-//            int x = rand.nextInt(20);
-//            arr[i] = x;
-//        }
-//        System.out.println(Arrays.toString(arr));
-//       int max;
-//       int min;
-//        for (int i = 0; i < arr.length; i++) {
-//            max=arr[i];
-//
-//
-//        }
-//
-//    }
+    public static void massiv_max() {
+        int[] arr = new int[10];
+        Random rand = new Random();
+        for (int i = 0; i < arr.length; i++) {
+            int x = rand.nextInt(20);
+            arr[i] = x;
+        }
+        System.out.println(Arrays.toString(arr));
+       int max_nomber=0;
+       for (int i=0; i<arr.length; i++){
+           if(max_nomber<=arr[i]){
+               max_nomber=arr[i];
+           }
+       }
+        System.out.println("max_number"+max_nomber);
+
+    }
+    public static void massiv_min() {
+        int[] arr = new int[10];
+        Random rand = new Random();
+        for (int i = 0; i < arr.length; i++) {
+            int x = rand.nextInt(20);
+            arr[i] = x;
+        }
+        System.out.println(Arrays.toString(arr));
+        int min_nomber=20;
+        for (int i=0; i<arr.length; i++){
+            if(min_nomber>=arr[i]){
+                min_nomber=arr[i];
+            }
+        }
+        System.out.println("min_number"+min_nomber);
+
+    }
 
 }
