@@ -13,7 +13,7 @@ public class Main {
             System.out.println("отрицательное число");
         }
         TextChek("Hello", 10);
-        Chek_year(304);
+        Chek_year(1200);
 
 
     }
