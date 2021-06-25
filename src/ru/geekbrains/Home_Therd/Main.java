@@ -5,6 +5,7 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
+
         Zamena();
         massivsto();
         massivtri();
@@ -12,6 +13,12 @@ public class Main {
         massivfive(5, 21);
         massiv_max();
         massiv_min();
+        summarray();
+        if (summarray()) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");
+        }
     }
 
     public static void Zamena() {
@@ -50,7 +57,7 @@ public class Main {
         int[][] arr = new int[10][10];
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length; j++) {
-                if (i == j || j == arr.length - i-1) {
+                if (i == j || j == arr.length - i - 1) {
                     arr[i][j] = 1;
                 }
             }
@@ -82,15 +89,16 @@ public class Main {
             arr[i] = x;
         }
         System.out.println(Arrays.toString(arr));
-       int max_nomber=0;
-       for (int i=0; i<arr.length; i++){
-           if(max_nomber<=arr[i]){
-               max_nomber=arr[i];
-           }
-       }
-        System.out.println("max_number"+max_nomber);
+        int max_nomber = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (max_nomber <= arr[i]) {
+                max_nomber = arr[i];
+            }
+        }
+        System.out.println("max_number" + max_nomber);
 
     }
+
     public static void massiv_min() {
         int[] arr = new int[10];
         Random rand = new Random();
@@ -99,14 +107,37 @@ public class Main {
             arr[i] = x;
         }
         System.out.println(Arrays.toString(arr));
-        int min_nomber=20;
-        for (int i=0; i<arr.length; i++){
-            if(min_nomber>=arr[i]){
-                min_nomber=arr[i];
+        int min_nomber = 20;
+        for (int i = 0; i < arr.length; i++) {
+            if (min_nomber >= arr[i]) {
+                min_nomber = arr[i];
             }
         }
-        System.out.println("min_number"+min_nomber);
+        System.out.println("min_number" + min_nomber);
 
+    }
+
+    public static boolean summarray() {
+        int[] arr = new int[6];
+        Random rand = new Random();
+        for (int i = 0; i < arr.length; i++) {
+            int x = rand.nextInt(10);
+            arr[i] = x;
+        }
+        System.out.println(Arrays.toString(arr));
+        int summ_l = 0;
+        int summ_p = 0;
+        for (int i = 0; i < arr.length; i++) {
+            summ_p += arr[i];
+        }
+        for (int i = 0; i < arr.length; i++) {
+            summ_l += arr[i];
+
+            if (summ_l == summ_p - summ_l) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }
