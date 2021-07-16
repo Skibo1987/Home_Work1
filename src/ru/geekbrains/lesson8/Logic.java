@@ -12,6 +12,7 @@ public class Logic {
     static final char DOT_EMPTY = '.';
 
     static char[][] map;
+    static String winner;
 
     static final Random random = new Random();
     static boolean isGameFinished;
@@ -21,10 +22,12 @@ public class Logic {
         printMap();
         if (checkWinLines(DOT_X, DOTS_TO_WIN)) {
             System.out.println("Вы победили!");
+            winner = "Вы победили!";
             return;
         }
         if (isFull()) {
             System.out.println("Ничья");
+            winner = "Ничья";
             return;
         }
 
@@ -32,10 +35,12 @@ public class Logic {
         printMap();
         if (checkWinLines(DOT_O, DOTS_TO_WIN)) {
             System.out.println("Компьютер победил. Сейчас их даже в шахматы не выиграть...");
+            winner = "Компьютер победил. Сейчас их даже в шахматы не выиграть...";
             return;
         }
         if (isFull()) {
             System.out.println("Ничья");
+            winner = "Ничья";
             return;
         }
 
@@ -162,7 +167,6 @@ public class Logic {
         }
         return true;
     }
-
 
 
     static boolean checkLine(int cy, int cx, int vy, int vx, char dot, int dotsToWin) {

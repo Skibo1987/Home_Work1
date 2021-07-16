@@ -9,6 +9,7 @@ public class GameWindow extends JFrame {
 
     private BattleMap battleMap;
     private Setting setting;
+    private WinWndow winWndow;
 
     public GameWindow() {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -27,9 +28,13 @@ public class GameWindow extends JFrame {
         battleMap = new BattleMap(this);
         add(battleMap, BorderLayout.CENTER);
         setting = new Setting(this);
+        winWndow = new WinWndow(this);
+
 
         button.addActionListener(e -> setting.setVisible(true));
-
+        if(Logic.isGameFinished){
+            winWndow.setVisible(true);
+        }
         buttonExit.addActionListener(e -> System.exit(0));
 
 
@@ -39,6 +44,8 @@ public class GameWindow extends JFrame {
     }
 
     void startNewGame(int fieldSize, int winLine) {
-        battleMap.startNewGame(fieldSize,winLine);
+        battleMap.startNewGame(fieldSize, winLine);
     }
+
+
 }
