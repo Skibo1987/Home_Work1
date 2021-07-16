@@ -96,7 +96,7 @@ public class BattleMap extends JPanel {
         g.setColor(Color.BLUE);
         ((Graphics2D) g).setStroke(new BasicStroke(3f));
         g.drawLine(x * cellWidth, y * cellHeight, (x + 1) * cellWidth, (y + 1) * cellHeight);
-        g.drawLine(x * cellWidth+cellWidth, y * cellHeight+cellHeight, (x + 1) * cellWidth, (y + 1) * cellHeight);
+        g.drawLine(x * cellWidth, (y+1) * cellHeight, (x + 1) * cellWidth, y * cellHeight);
     }
 
     private void DrawO(Graphics g, int y, int x) {
