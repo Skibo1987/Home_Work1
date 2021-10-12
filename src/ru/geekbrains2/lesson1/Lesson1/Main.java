@@ -1,4 +1,4 @@
-package ru.geekbrains2.lesson1;
+package ru.geekbrains2.lesson1.Lesson1;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,9 +11,10 @@ public class Main {
             sk[i].jump();
             sk[i].ran();
         }
-        public void Test(){
-            System.out.println(jump);
-        }
+//        Wall[] sport = {man1, bot, cat};
+//        for (int i = 0; i < sk.length; i++) {
+//
+//        }
 
 
     }

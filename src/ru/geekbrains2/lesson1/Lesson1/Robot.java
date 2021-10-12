@@ -1,4 +1,4 @@
-package ru.geekbrains2.lesson1;
+package ru.geekbrains2.lesson1.Lesson1;
 
 public class Robot implements  Skills{
     private String name;
