@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        String[] arr = {"Orange", "Apple", "banana"};
+        String[] arr = {"Orange", "Apple", "banana","Coconat"};
 
         ArrayList<String> al = arrayToList(arr);
         System.out.println(al);
